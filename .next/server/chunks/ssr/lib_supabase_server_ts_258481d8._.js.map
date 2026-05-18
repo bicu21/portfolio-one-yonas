@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/lydia/OneDrive/Desktop/Yonas-portfolio/lib/supabase/server.ts"],"sourcesContent":["import { createServerClient } from \"@supabase/ssr\";\nimport { cookies } from \"next/headers\";\n\nexport async function createClient() {\n  const cookieStore = await cookies();\n\n  return createServerClient(\n    process.env.NEXT_PUBLIC_SUPABASE_URL!,\n    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,\n    {\n      cookies: {\n        getAll() {\n          return cookieStore.getAll();\n        },\n        setAll(cookiesToSet) {\n          try {\n            cookiesToSet.forEach(({ name, value, options }) =>\n              cookieStore.set(name, value, options)\n            );\n          } catch {\n            // Server component — cookies are read-only, ignore\n          }\n        },\n      },\n    }\n  );\n}\n"],"names":[],"mappings":";;;;AAAA;AACA;;;AAEO,eAAe;IACpB,MAAM,cAAc,MAAM,IAAA,0IAAO;IAEjC,OAAO,IAAA,+LAAkB,gIAGvB;QACE,SAAS;YACP;gBACE,OAAO,YAAY,MAAM;YAC3B;YACA,QAAO,YAAY;gBACjB,IAAI;oBACF,aAAa,OAAO,CAAC,CAAC,EAAE,IAAI,EAAE,KAAK,EAAE,OAAO,EAAE,GAC5C,YAAY,GAAG,CAAC,MAAM,OAAO;gBAEjC,EAAE,OAAM;gBACN,mDAAmD;gBACrD;YACF;QACF;IACF;AAEJ","debugId":null}}]
+}

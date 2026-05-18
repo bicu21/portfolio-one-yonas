@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/lydia/OneDrive/Desktop/Yonas-portfolio/app/gallery/layout.tsx"],"sourcesContent":["import type { Metadata } from \"next\";\n\nexport const metadata: Metadata = {\n  title: \"Gallery\",\n  description: \"Explore the complete collection — paintings floating in infinite darkness.\",\n};\n\nexport default function GalleryLayout({ children }: { children: React.ReactNode }) {\n  return <>{children}</>;\n}\n"],"names":[],"mappings":";;;;;;;;AAEO,MAAM,WAAqB;IAChC,OAAO;IACP,aAAa;AACf;AAEe,SAAS,cAAc,EAAE,QAAQ,EAAiC;IAC/E,qBAAO;kBAAG;;AACZ","debugId":null}}]
+}
