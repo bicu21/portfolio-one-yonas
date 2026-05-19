@@ -19,6 +19,19 @@ export default function ContactClient() {
   return (
     <div className="relative min-h-screen flex items-center justify-center px-6 pt-24 pb-16"
       style={{ background: "#020617" }}>
+      {/* Background Image with Glassmorphism */}
+      <div
+        className="fixed inset-0 z-0 bg-cover bg-center pointer-events-none opacity-15"
+        style={{ backgroundImage: "url('/bg-hallway.jpg')" }}
+      />
+      <div
+        className="fixed inset-0 z-0 pointer-events-none"
+        style={{
+          background: "rgba(2, 6, 23, 0.5)",
+          backdropFilter: "blur(12px)",
+        }}
+      />
+
       <FogOverlay />
 
       <div

@@ -188,17 +188,21 @@ export default function HomePage() {
       </section>
 
       {/* ──────────────── FEATURED WORKS ──────────────── */}
-      <section className="relative py-32 px-6">
-        {/* Section BG glow */}
+      <section className="relative py-32 px-6 overflow-hidden">
+        {/* Background Image with Glassmorphism */}
         <div
-          className="absolute inset-0 pointer-events-none"
+          className="absolute inset-0 z-0 bg-cover bg-center pointer-events-none opacity-20"
+          style={{ backgroundImage: "url('/bg-deepblue.jpg')" }}
+        />
+        <div
+          className="absolute inset-0 z-5 pointer-events-none"
           style={{
-            background:
-              "radial-gradient(ellipse 80% 60% at 50% 50%, rgba(0,229,255,0.03) 0%, transparent 70%)",
+            background: "rgba(2, 6, 23, 0.4)",
+            backdropFilter: "blur(6px)",
           }}
         />
 
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto relative z-10">
           {/* Section header */}
           <div className="section-reveal mb-16 flex items-end justify-between">
             <div>
@@ -228,15 +232,20 @@ export default function HomePage() {
 
       {/* ──────────────── ABOUT TEASER ──────────────── */}
       <section className="relative py-32 px-6 overflow-hidden">
+        {/* Background Image with Glassmorphism */}
         <div
-          className="absolute inset-0 pointer-events-none"
+          className="absolute inset-0 z-0 bg-cover bg-center pointer-events-none opacity-25"
+          style={{ backgroundImage: "url('/bg-waterfall.jpg')" }}
+        />
+        <div
+          className="absolute inset-0 z-5 pointer-events-none"
           style={{
-            background:
-              "radial-gradient(ellipse 60% 80% at 0% 50%, rgba(22,78,99,0.15) 0%, transparent 60%)",
+            background: "rgba(2, 6, 23, 0.55)",
+            backdropFilter: "blur(8px)",
           }}
         />
 
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
           <div className="section-reveal">
             <p className="font-body text-xs tracking-[0.5em] uppercase mb-4" style={{ color: "#00e5ff" }}>
               The Artist
@@ -261,8 +270,9 @@ export default function HomePage() {
                 className="w-64 h-64 rounded-sm relative"
                 style={{
                   border: "1px solid rgba(0,229,255,0.15)",
-                  background: "rgba(0,229,255,0.02)",
+                  background: "rgba(255,255,255,0.02)",
                   boxShadow: "0 0 60px rgba(0,229,255,0.08)",
+                  backdropFilter: "blur(10px)",
                 }}
               >
                 <div
@@ -288,15 +298,21 @@ export default function HomePage() {
       </section>
 
       {/* ──────────────── CONTACT CTA ──────────────── */}
-      <section className="relative py-32 px-6 text-center">
+      <section className="relative py-32 px-6 text-center overflow-hidden">
+        {/* Background Image with Glassmorphism */}
         <div
-          className="absolute inset-0 pointer-events-none"
+          className="absolute inset-0 z-0 bg-cover bg-center pointer-events-none opacity-20"
+          style={{ backgroundImage: "url('/bg-hallway.jpg')" }}
+        />
+        <div
+          className="absolute inset-0 z-5 pointer-events-none"
           style={{
-            background:
-              "radial-gradient(ellipse 60% 60% at 50% 100%, rgba(0,229,255,0.05) 0%, transparent 60%)",
+            background: "rgba(2, 6, 23, 0.6)",
+            backdropFilter: "blur(10px)",
           }}
         />
-        <div className="max-w-2xl mx-auto section-reveal">
+
+        <div className="max-w-2xl mx-auto section-reveal relative z-10">
           <p className="font-body text-xs tracking-[0.5em] uppercase mb-4" style={{ color: "#00e5ff" }}>
             Collaborations
           </p>

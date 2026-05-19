@@ -29,6 +29,19 @@ export default function GalleryPage() {
 
   return (
     <div className="relative min-h-screen pt-28 pb-24 px-6" style={{ background: "#020617" }}>
+      {/* Background Image with Glassmorphism */}
+      <div
+        className="fixed inset-0 z-0 bg-cover bg-center pointer-events-none opacity-15"
+        style={{ backgroundImage: "url('/bg-deepblue.jpg')" }}
+      />
+      <div
+        className="fixed inset-0 z-0 pointer-events-none"
+        style={{
+          background: "rgba(2, 6, 23, 0.5)",
+          backdropFilter: "blur(12px)",
+        }}
+      />
+
       {/* Ambient glows */}
       <div
         className="fixed top-0 left-0 w-full h-screen pointer-events-none z-0"
