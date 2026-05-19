@@ -126,6 +126,96 @@ export default function ContactClient() {
           </motion.button>
         </motion.form>
 
+        {/* Social / Contact Links */}
+        <motion.div
+          className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4"
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+        >
+          <a
+            href="mailto:yonas@example.com"
+            className="flex flex-col items-center justify-center p-4 rounded-sm transition-all duration-300 group"
+            style={{
+              background: "rgba(255,255,255,0.01)",
+              border: "1px solid rgba(0,229,255,0.06)",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = "rgba(0,229,255,0.3)";
+              e.currentTarget.style.background = "rgba(0,229,255,0.02)";
+              e.currentTarget.style.boxShadow = "0 0 20px rgba(0,229,255,0.1)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "rgba(0,229,255,0.06)";
+              e.currentTarget.style.background = "rgba(255,255,255,0.01)";
+              e.currentTarget.style.boxShadow = "none";
+            }}
+          >
+            <span className="font-body text-[10px] tracking-[0.3em] uppercase text-white/30 group-hover:text-[#00e5ff] transition-colors">
+              Email
+            </span>
+            <span className="mt-1 font-body text-xs text-white/60 tracking-wider">
+              yonas@example.com
+            </span>
+          </a>
+
+          <a
+            href="https://instagram.com/yonas"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center justify-center p-4 rounded-sm transition-all duration-300 group"
+            style={{
+              background: "rgba(255,255,255,0.01)",
+              border: "1px solid rgba(0,229,255,0.06)",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = "rgba(0,229,255,0.3)";
+              e.currentTarget.style.background = "rgba(0,229,255,0.02)";
+              e.currentTarget.style.boxShadow = "0 0 20px rgba(0,229,255,0.1)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "rgba(0,229,255,0.06)";
+              e.currentTarget.style.background = "rgba(255,255,255,0.01)";
+              e.currentTarget.style.boxShadow = "none";
+            }}
+          >
+            <span className="font-body text-[10px] tracking-[0.3em] uppercase text-white/30 group-hover:text-[#00e5ff] transition-colors">
+              Instagram
+            </span>
+            <span className="mt-1 font-body text-xs text-white/60 tracking-wider">
+              @yonas
+            </span>
+          </a>
+
+          <a
+            href="https://t.me/yonas"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center justify-center p-4 rounded-sm transition-all duration-300 group"
+            style={{
+              background: "rgba(255,255,255,0.01)",
+              border: "1px solid rgba(0,229,255,0.06)",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = "rgba(0,229,255,0.3)";
+              e.currentTarget.style.background = "rgba(0,229,255,0.02)";
+              e.currentTarget.style.boxShadow = "0 0 20px rgba(0,229,255,0.1)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "rgba(0,229,255,0.06)";
+              e.currentTarget.style.background = "rgba(255,255,255,0.01)";
+              e.currentTarget.style.boxShadow = "none";
+            }}
+          >
+            <span className="font-body text-[10px] tracking-[0.3em] uppercase text-white/30 group-hover:text-[#00e5ff] transition-colors">
+              Telegram
+            </span>
+            <span className="mt-1 font-body text-xs text-white/60 tracking-wider">
+              @yonas
+            </span>
+          </a>
+        </motion.div>
+
         {/* Socials / info */}
         <motion.div
           className="mt-10 text-center"
