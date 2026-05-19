@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import type { ReactNode } from "react";
+import type { ReactNode, CSSProperties } from "react";
 
 interface RevealTextProps {
   children: string | ReactNode;
@@ -9,6 +9,7 @@ interface RevealTextProps {
   delay?: number;
   stagger?: number;
   as?: "h1" | "h2" | "h3" | "p" | "span" | "div";
+  style?: CSSProperties;
 }
 
 const containerVariants = {
@@ -39,11 +40,13 @@ export default function RevealText({
   delay = 0,
   stagger = 0.08,
   as: Tag = "div",
+  style,
 }: RevealTextProps) {
   if (typeof children !== "string") {
     return (
       <motion.div
         className={className}
+        style={style}
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -65,6 +68,7 @@ export default function RevealText({
       custom={stagger}
       transition={{ delayChildren: delay }}
       className={`${className} flex flex-wrap gap-x-[0.25em]`}
+      style={style}
     >
       {words.map((word, i) => (
         <motion.span key={i} variants={wordVariants} style={{ display: "inline-block" }}>
@@ -74,3 +78,4 @@ export default function RevealText({
     </motion.div>
   );
 }
+
